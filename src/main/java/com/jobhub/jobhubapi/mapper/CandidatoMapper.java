@@ -23,7 +23,7 @@ public class CandidatoMapper {
         return modelMapper.map(candidato, CandidatoResponseDTO.class);
     }
 
-    public List<CandidatoResponseDTO> convertToDTO(List<Candidato> candidatos){
+    public List<CandidatoResponseDTO> convertToListDTO(List<Candidato> candidatos){
         return candidatos.stream()
                 .map(this::convertToDTO)
                 .toList();

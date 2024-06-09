@@ -13,12 +13,9 @@ public class OfertaRequestDTO {
     private Long id;
     @NotNull(message = "El título no puede estar vacio")
     private String titulo;
-    @NotNull(message = "El título no puede estar vacio")
+    @NotNull(message = "La descripcion no puede estar vacia")
     private String descripcion;
-    @NotNull(message = "El título no puede estar vacio")
+    @NotNull(message = "El el segemento objetivo puede estar vacio")
     private String segmentoObjetivo;
-    @NotNull(message = "El título no puede estar vacio")
-    private String id_postulante;
-    @NotNull(message = "El título no puede estar vacio")
-    private String id_ofertante;
+
 }

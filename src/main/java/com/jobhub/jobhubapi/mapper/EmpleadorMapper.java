@@ -23,7 +23,7 @@ public class EmpleadorMapper {
         return modelMapper.map(empleador, EmpleadorResponseDTO.class);
     }
 
-    public List<EmpleadorResponseDTO> convertToDTO(List<Empleador> empleadores){
+    public List<EmpleadorResponseDTO> convertToListDTO(List<Empleador> empleadores){
         return empleadores.stream()
                 .map(this::convertToDTO)
                 .toList();

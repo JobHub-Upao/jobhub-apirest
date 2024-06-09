@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class OfertaResponseDTO {
     private Long id;
-    private CandidatoResponseDTO postulante;
-    private EmpleadorResponseDTO ofertante;
+    /*private CandidatoResponseDTO postulante;
+    private EmpleadorResponseDTO ofertante;*/
     private String titulo;
     private String descripcion;
     private String segmentoObjetivo;

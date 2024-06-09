@@ -12,11 +12,13 @@ import lombok.NoArgsConstructor;
 @Table(name="candidatos")
 public class Candidato {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private Long id;
-    @Column(name="nombre", nullable = false, unique = true)
+    @Column(name="nombre", nullable = false)
     private String nombre;
     @Column(name="profesion", nullable = false)
     private String profesion;
-    @Column(name="email", nullable = true)
+    @Column(name="email", nullable = false)
     private String email;
 }

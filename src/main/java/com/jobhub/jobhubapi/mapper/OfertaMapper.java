@@ -26,7 +26,7 @@ public class OfertaMapper {
         return modelMapper.map(oferta, OfertaResponseDTO.class);
     }
 
-    public List<OfertaResponseDTO> convertToDTO(List<Oferta> ofertas){
+    public List<OfertaResponseDTO> convertToListDTO(List<Oferta> ofertas){
         return ofertas.stream()
                 .map(this::convertToDTO)
                 .toList();

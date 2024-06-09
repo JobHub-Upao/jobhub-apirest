@@ -1,6 +1,7 @@
 package com.jobhub.jobhubapi.config;
 
 import com.jobhub.jobhubapi.exception.BadRequestException;
+import com.jobhub.jobhubapi.exception.DuplicateCandidatoException;
 import com.jobhub.jobhubapi.exception.ResourceNotFoundException;
 import lombok.AllArgsConstructor;
 import org.springframework.context.MessageSource;
@@ -47,6 +48,12 @@ public class RestExceptionHandler {
 
     @ExceptionHandler(BadRequestException.class)
     public ProblemDetail handleBadRequestException(BadRequestException ex){
+        return ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST,
+                ex.getMessage());
+    }
+
+    @ExceptionHandler(DuplicateCandidatoException.class)
+    public ProblemDetail handleDuplicateCandidatoException(DuplicateCandidatoException ex){
         return ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST,
                 ex.getMessage());
     }
